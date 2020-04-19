@@ -1,7 +1,6 @@
-proj=args.c
+proj=ipk-sniffer
 
 make:
-	@gcc -std=c99 -Wall -Wextra args.c -o args
-
+	@gcc -std=c99 -Wall -Wextra -D_DEFAULT_SOURCE ipk.c -o $(proj) -lpcap 
 clean:
-	@rm args
+	@rm $(proj)
