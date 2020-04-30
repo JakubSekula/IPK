@@ -1,0 +1,17 @@
+Program ipk-sniffer slouzi k zachyceni paketu na sitove komunikaci. Program zachyti paket na siti a vypise jeho obsah. ipk-sniffer umi pracovat s pakety TCP a pakety UDP. Programu lze zadat nasledujici upresneni:
+
+-i eth0 (rozhraní, na kterém se bude poslouchat. Nebude-li tento parametr uveden, vypíše se seznam aktivních rozhraní)
+
+-p 23 (bude filtrování paketů na daném rozhraní podle portu; nebude-li tento parametr uveden, uvažují se všechny porty)
+
+-t nebo --tcp (bude zobrazovat pouze tcp pakety)
+
+-u nebo --udp (bude zobrazovat pouze udp pakety)
+
+Pokud nebude -tcp ani -udp specifikováno, uvažují se TCP a UDP pakety zároveň
+
+-n 10 (určuje počet paketů, které se mají zobrazit; pokud není uvedeno, uvažujte zobrazení pouze 1 paket)
+
+ipk-sniffer jde prelozit prikazem make a odstranit jej je mozne pomoci prikazu make clean.
+
+Samotny program se spusti prikazem: ./ipk-sniffer -i rozhraní [-p ­­port] [--tcp|-t] [--udp|-u] [-n num]
